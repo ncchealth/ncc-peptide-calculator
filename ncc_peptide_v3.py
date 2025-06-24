@@ -22,7 +22,7 @@ lab_rate = st.number_input("Sterile Lab Hourly Rate (AUD)", value=200.0)
 total_api_cost = 0
 
 if mode == "Single Peptide":
-    peptide_name = st.selectbox("Peptide Name", ["BPC-157", "TB500", "CJC-1295", "Ipamorelin"])
+    peptide_name = st.selectbox("Peptide Name", ["BPC-157", "TB500", "CJC-1295", "Ipamorelin", "NAD+"])
     strength_per_vial_mg = st.number_input("Strength per Vial (mg)", value=6.0, step=0.5)
     price_per_gram = st.number_input("AUD Price per Gram", value=1198.5)
 
@@ -30,12 +30,12 @@ if mode == "Single Peptide":
 
 elif mode == "Combo Peptide":
     st.subheader("Peptide 1")
-    peptide1 = st.selectbox("Peptide 1", ["CJC-1295", "BPC-157", "TB500", "Ipamorelin"], key="p1")
+    peptide1 = st.selectbox("Peptide 1", ["CJC-1295", "BPC-157", "TB500", "Ipamorelin", "NAD+"], key="p1")
     strength1 = st.number_input("Strength per Vial (mg)", value=3.0, key="s1")
     price1 = st.number_input("AUD Price per Gram", value=1648.5, key="pr1")
 
     st.subheader("Peptide 2")
-    peptide2 = st.selectbox("Peptide 2", ["Ipamorelin", "BPC-157", "TB500", "CJC-1295"], key="p2")
+    peptide2 = st.selectbox("Peptide 2", ["Ipamorelin", "BPC-157", "TB500", "CJC-1295", "NAD+"], key="p2")
     strength2 = st.number_input("Strength per Vial (mg)", value=3.0, key="s2")
     price2 = st.number_input("AUD Price per Gram", value=898.5, key="pr2")
 
